@@ -58,14 +58,14 @@ def get_shape(shape_name='hypercube', dim=3):
 
 def render_shape(shape: Shape):
     fig = go.Figure(data=[go.Scatter3d(
-        x=shape.vert_coord(0),
-        y=shape.vert_coord(1),
-        z=shape.vert_coord(2),
+        x=shape.vert_coord(1),
+        y=shape.vert_coord(2),
+        z=shape.vert_coord(3),
         mode='markers'
     ), go.Scatter3d(
-        x=shape.edge_coord(0),
-        y=shape.edge_coord(1),
-        z=shape.edge_coord(2),
+        x=shape.edge_coord(1),
+        y=shape.edge_coord(2),
+        z=shape.edge_coord(3),
         mode='lines'
     )])
     fig.show()
